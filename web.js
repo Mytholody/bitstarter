@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-// Reads index.html and allows printout from var printbuff
+// Reads index.html and outputs as a buffer
 var readin = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
