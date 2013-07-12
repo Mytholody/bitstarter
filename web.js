@@ -4,7 +4,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 // Reads index.html and allows printout from var printbuff
-var readin = fs.readFileSync('index.html','utf-8');
+var readin = fs.readFileSync('index.html');
 var buffer = new Buffer(27);
 buffer.write(readin);
 var printbuff = buffer.toString('utf-8');
